@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c0806" />
+  <title>BREW &amp; BLOOM | Every Cup Tells a Story</title>
+  <meta name="description" content="BREW &amp; BLOOM is a premium dark-roast coffee brand in Karachi. Freshly roasted beans, expert baristas and a cozy place to stay." />
+
+  <!-- Free Google Fonts: Fraunces (headings) + Manrope (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Scroll progress bar (top of the screen) -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- Soft light that follows the mouse (desktop only) -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ============ A. NAVIGATION BAR (floating pill) ============ -->
+  <header class="header" id="header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home" class="logo" aria-label="BREW and BLOOM home">
+        <span class="logo-mark" aria-hidden="true">B</span>
+        <span class="logo-text">BREW <i>&amp;</i> BLOOM</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#coffee" class="nav-link">Our Coffee</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#story" class="nav-link">Our Story</a></li>
+        <li><a href="#locations" class="nav-link">Locations</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart, 0 items">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#products" class="btn btn-primary btn-sm order-btn">Order Now</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ B. HERO SECTION ============ -->
+    <section class="hero" id="home">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="pill hero-in" style="--d:0s"><span class="live-dot"></span> Now brewing in Karachi</p>
+          <h1 class="hero-in" style="--d:.12s">Every Cup <em>Tells a Story.</em></h1>
+          <p class="hero-sub hero-in" style="--d:.24s">Discover the art of exceptional coffee, crafted with passion and served with love.</p>
+          <div class="hero-buttons hero-in" style="--d:.36s">
+            <a href="#coffee" class="btn btn-primary">Explore Our Coffee <span aria-hidden="true">&rarr;</span></a>
+            <a href="#story" class="btn btn-ghost">Discover Our Story</a>
+          </div>
+          <ul class="hero-facts hero-in" style="--d:.48s">
+            <li><strong>12+</strong><span>Signature blends</span></li>
+            <li><strong>4.9&#9733;</strong><span>Guest rating</span></li>
+            <li><strong>3</strong><span>Karachi cafes</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual hero-in" style="--d:.2s">
+          <div class="orb" id="orb">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80" alt="A warm cup of coffee on a dark wooden table" />
+            <svg class="ring-text" viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="ringPath" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs>
+              <text><textPath href="#ringPath">FRESHLY ROASTED • SMALL BATCH • SERVED WITH LOVE • </textPath></text>
+            </svg>
+            <span class="chip chip-1"><b>&#9749;</b> 100% Arabica</span>
+            <span class="chip chip-2"><b>&#128293;</b> Roasted today</span>
+            <span class="chip chip-3"><b>&#9733;</b> 4.9 / 5 loved</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#products" class="scroll-hint" aria-label="Scroll down to products"><span></span></a>
+    </section>
+
+    <!-- Moving words strip -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Single Origin</span><span>&#10022;</span><span>Slow Roasted</span><span>&#10022;</span><span>Latte Art</span><span>&#10022;</span><span>Cold Brew</span><span>&#10022;</span><span>Fresh Pastries</span><span>&#10022;</span>
+        <span>Single Origin</span><span>&#10022;</span><span>Slow Roasted</span><span>&#10022;</span><span>Latte Art</span><span>&#10022;</span><span>Cold Brew</span><span>&#10022;</span><span>Fresh Pastries</span><span>&#10022;</span>
+      </div>
+    </div>
+
+    <!-- ============ C. FEATURED PRODUCTS ============ -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Customer favourites</p>
+          <h2>Featured <em>Brews</em></h2>
+          <p>Four drinks our guests keep coming back for, made fresh to order.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="card spot reveal">
+            <div class="card-img"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80" alt="Classic cappuccino with creamy foam" loading="lazy" /><span class="price-badge">Rs 650</span></div>
+            <div class="card-body">
+              <h3>Classic Cappuccino</h3>
+              <p>Rich espresso with velvety steamed milk and a thick, airy foam crown.</p>
+              <button class="btn btn-primary btn-sm btn-block add-to-cart" data-name="Classic Cappuccino" data-price="650">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="card spot reveal" style="--delay:.1s">
+            <div class="card-img"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Caramel latte in a ceramic cup" loading="lazy" /><span class="price-badge">Rs 750</span></div>
+            <div class="card-body">
+              <h3>Caramel Latte</h3>
+              <p>Smooth espresso, steamed milk and golden house-made caramel drizzle.</p>
+              <button class="btn btn-primary btn-sm btn-block add-to-cart" data-name="Caramel Latte" data-price="750">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="card spot reveal" style="--delay:.2s">
+            <div class="card-img"><img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=800&q=80" alt="A fresh shot of espresso with golden crema" loading="lazy" /><span class="price-badge">Rs 450</span></div>
+            <div class="card-body">
+              <h3>Espresso</h3>
+              <p>A bold, concentrated shot with deep cocoa notes and golden crema.</p>
+              <button class="btn btn-primary btn-sm btn-block add-to-cart" data-name="Espresso" data-price="450">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="card spot reveal" style="--delay:.3s">
+            <div class="card-img"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Mocha topped with chocolate and cream" loading="lazy" /><span class="price-badge">Rs 800</span></div>
+            <div class="card-body">
+              <h3>Mocha Delight</h3>
+              <p>Dark chocolate meets espresso, finished with whipped cream and cocoa.</p>
+              <button class="btn btn-primary btn-sm btn-block add-to-cart" data-name="Mocha Delight" data-price="800">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ D. COFFEE COLLECTION (expanding panels) ============ -->
+    <section class="section section-alt" id="coffee">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The collection</p>
+          <h2>Our <em>Coffee</em> Collection</h2>
+          <p>Hover, tap or press Enter on a panel to explore each variety.</p>
+        </div>
+
+        <div class="panels reveal" id="panels">
+          <article class="panel active" tabindex="0" aria-label="Single Origin collection">
+            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1000&q=80" alt="Roasted single origin coffee beans" loading="lazy" />
+            <div class="panel-body">
+              <span class="panel-num">01</span>
+              <span class="tag">Beans</span>
+              <h3>Single Origin</h3>
+              <p>Traceable beans with bright, fruity notes, roasted in small batches.</p>
+            </div>
+          </article>
+
+          <article class="panel" tabindex="0" aria-label="Cold Brew collection">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=1000&q=80" alt="Iced cold brew coffee in a glass" loading="lazy" />
+            <div class="panel-body">
+              <span class="panel-num">02</span>
+              <span class="tag">Cold</span>
+              <h3>Cold Brew</h3>
+              <p>Steeped for 18 hours for a naturally sweet, ultra-smooth finish.</p>
+            </div>
+          </article>
+
+          <article class="panel" tabindex="0" aria-label="Latte Art Series collection">
+            <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=1000&q=80" alt="Latte art in a white cup" loading="lazy" />
+            <div class="panel-body">
+              <span class="panel-num">03</span>
+              <span class="tag">Milk-based</span>
+              <h3>Latte Art Series</h3>
+              <p>Silky microfoam poured into hearts, tulips and rosettes by our baristas.</p>
+            </div>
+          </article>
+
+          <article class="panel" tabindex="0" aria-label="House Blend collection">
+            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=1000&q=80" alt="House blend coffee served in a cup" loading="lazy" />
+            <div class="panel-body">
+              <span class="panel-num">04</span>
+              <span class="tag">Signature</span>
+              <h3>House Blend</h3>
+              <p>Our balanced everyday blend with notes of caramel, nuts and milk chocolate.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MOOD PICKER (unique interactive feature) ============ -->
+    <section class="section" id="match">
+      <div class="container match">
+        <div class="match-intro reveal">
+          <p class="eyebrow">Not sure what to order?</p>
+          <h2>Pick your <em>mood</em>, we pick your cup</h2>
+          <p>Tell us how today feels and we will match you with the perfect drink.</p>
+          <div class="moods" role="group" aria-label="Choose your mood">
+            <button class="mood-btn active" data-mood="energetic" aria-pressed="true">&#9889; Need energy</button>
+            <button class="mood-btn" data-mood="cozy" aria-pressed="false">&#128716; Feeling cozy</button>
+            <button class="mood-btn" data-mood="sweet" aria-pressed="false">&#127850; Sweet tooth</button>
+            <button class="mood-btn" data-mood="focus" aria-pressed="false">&#128218; Deep focus</button>
+          </div>
+        </div>
+
+        <div class="match-card spot reveal" style="--delay:.12s" aria-live="polite">
+          <span class="tag" id="moodTag">Your match</span>
+          <h3 id="moodName">Espresso</h3>
+          <p id="moodText">Bold, quick and ready for anything.</p>
+          <div class="match-foot">
+            <span class="price" id="moodPrice">Rs 450</span>
+            <button class="btn btn-primary btn-sm" id="moodAdd">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ E. OUR STORY ============ -->
+    <section class="section section-alt" id="story">
+      <div class="container story">
+        <div class="story-images reveal">
+          <img class="story-main" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=80" alt="Barista preparing coffee in a cozy cafe" loading="lazy" />
+          <img class="story-small" src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=600&q=80" alt="Coffee cup and beans on a table" loading="lazy" />
+        </div>
+
+        <div class="story-text reveal" style="--delay:.12s">
+          <p class="eyebrow">Our story</p>
+          <h2>Born from a love of <em>great coffee</em></h2>
+          <p>BREW &amp; BLOOM started with one small grinder and one big idea: coffee should feel like a warm welcome. What began as weekend tastings among friends in Karachi grew into a cafe where every cup is made with care.</p>
+          <p>We source premium beans from trusted growers, roast them fresh in small batches, and train our baristas to treat each drink like a craft. For us, coffee is not just a drink. It is the start of a conversation, a quiet moment, a memory.</p>
+
+          <ul class="stats">
+            <li><strong data-count="2018" data-plain="true">0</strong><span>Founded</span></li>
+            <li><strong data-count="3">0</strong><span>Cafes</span></li>
+            <li><strong data-count="40" data-suffix="k+">0</strong><span>Cups a month</span></li>
+            <li><strong data-count="12" data-suffix="+">0</strong><span>Blends</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Say Hello</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ F. SPECIAL MENU ============ -->
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Fresh from the bar</p>
+          <h2>Special <em>Menu</em></h2>
+          <p>Choose a category to see our most popular drinks and bites.</p>
+        </div>
+
+        <div class="menu-tabs reveal" role="tablist" aria-label="Menu categories">
+          <button class="tab active" role="tab" aria-selected="true" data-filter="hot">Hot Coffee</button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="cold">Cold &amp; Iced</button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="bites">Bakery</button>
+        </div>
+
+        <ul class="menu-list spot reveal" id="menuList">
+          <li class="menu-item" data-category="hot"><div class="menu-row"><h3>Flat White</h3><span class="dots"></span><span class="price">Rs 600</span></div><p>Double ristretto with silky microfoam.</p></li>
+          <li class="menu-item" data-category="hot"><div class="menu-row"><h3>Hazelnut Latte</h3><span class="dots"></span><span class="price">Rs 780</span></div><p>Roasted hazelnut syrup, espresso and steamed milk.</p></li>
+          <li class="menu-item" data-category="hot"><div class="menu-row"><h3>Americano</h3><span class="dots"></span><span class="price">Rs 500</span></div><p>Espresso lengthened with hot water, clean and bold.</p></li>
+          <li class="menu-item" data-category="hot"><div class="menu-row"><h3>Spanish Latte</h3><span class="dots"></span><span class="price">Rs 820</span></div><p>Espresso with sweet condensed milk, creamy and rich.</p></li>
+
+          <li class="menu-item" data-category="cold" hidden><div class="menu-row"><h3>Iced Caramel Macchiato</h3><span class="dots"></span><span class="price">Rs 850</span></div><p>Layered vanilla milk, espresso and caramel over ice.</p></li>
+          <li class="menu-item" data-category="cold" hidden><div class="menu-row"><h3>Classic Cold Brew</h3><span class="dots"></span><span class="price">Rs 700</span></div><p>18-hour steeped coffee served over ice.</p></li>
+          <li class="menu-item" data-category="cold" hidden><div class="menu-row"><h3>Iced Mocha</h3><span class="dots"></span><span class="price">Rs 830</span></div><p>Chocolate, espresso and cold milk, topped with cream.</p></li>
+          <li class="menu-item" data-category="cold" hidden><div class="menu-row"><h3>Coffee Frappe</h3><span class="dots"></span><span class="price">Rs 900</span></div><p>Blended coffee, ice and cream, sweet and refreshing.</p></li>
+
+          <li class="menu-item" data-category="bites" hidden><div class="menu-row"><h3>Butter Croissant</h3><span class="dots"></span><span class="price">Rs 420</span></div><p>Flaky, golden and baked fresh each morning.</p></li>
+          <li class="menu-item" data-category="bites" hidden><div class="menu-row"><h3>Blueberry Muffin</h3><span class="dots"></span><span class="price">Rs 380</span></div><p>Soft and moist with juicy blueberries.</p></li>
+          <li class="menu-item" data-category="bites" hidden><div class="menu-row"><h3>Chocolate Brownie</h3><span class="dots"></span><span class="price">Rs 450</span></div><p>Fudgy, dark chocolate, best with an espresso.</p></li>
+          <li class="menu-item" data-category="bites" hidden><div class="menu-row"><h3>Cinnamon Roll</h3><span class="dots"></span><span class="price">Rs 480</span></div><p>Warm roll with cinnamon swirl and cream cheese glaze.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ G. WHY CHOOSE US (bento grid) ============ -->
+    <section class="section section-alt" id="why">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The difference</p>
+          <h2>Why Choose <em>Us</em></h2>
+        </div>
+
+        <div class="bento">
+          <div class="tile tile-wide spot reveal">
+            <span class="tile-icon" aria-hidden="true">&#127775;</span>
+            <h3>Premium Quality Coffee</h3>
+            <p>Only top-grade Arabica beans, hand-picked from trusted growers, make it into our cups.</p>
+          </div>
+          <div class="tile spot reveal" style="--delay:.1s">
+            <span class="tile-icon" aria-hidden="true">&#128293;</span>
+            <h3>Freshly Roasted Beans</h3>
+            <p>Small batches every week for peak aroma.</p>
+          </div>
+          <div class="tile spot reveal" style="--delay:.2s">
+            <span class="tile-icon" aria-hidden="true">&#127913;</span>
+            <h3>Expert Baristas</h3>
+            <p>Trained, passionate and ready to craft your perfect cup.</p>
+          </div>
+          <div class="tile tile-wide spot reveal" style="--delay:.3s">
+            <span class="tile-icon" aria-hidden="true">&#128715;</span>
+            <h3>Cozy Environment</h3>
+            <p>Soft lighting, warm wood and comfy seats made for slow mornings, long chats and late-night study sessions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ H. CUSTOMER REVIEWS ============ -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kind words</p>
+          <h2>What Our <em>Guests</em> Say</h2>
+          <p class="small-note">Sample reviews written for this demo website.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <figure class="review spot reveal">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>The Caramel Latte is the best I have had in Karachi. Warm atmosphere and the staff remembers my order!</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">AK</span><span><strong>Ayesha Khan</strong><small>Regular guest</small></span></figcaption>
+          </figure>
+
+          <figure class="review spot reveal" style="--delay:.1s">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>Perfect place to study and catch up with friends. Their cold brew keeps me going through exam week.</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">HR</span><span><strong>Hamza Raza</strong><small>University student</small></span></figcaption>
+          </figure>
+
+          <figure class="review spot reveal" style="--delay:.2s">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>You can taste the freshness in every sip. The espresso is bold and the croissants are always warm.</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">SM</span><span><strong>Sara Malik</strong><small>Food blogger</small></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ I. STORE LOCATIONS (interactive) ============ -->
+    <section class="section section-alt" id="locations">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Visit us</p>
+          <h2>Our <em>Locations</em></h2>
+          <p class="small-note">These locations and contact details are fictional sample information for this demo.</p>
+        </div>
+
+        <div class="locations reveal">
+          <div class="loc-list" role="tablist" aria-label="Choose a location">
+            <button class="loc-btn active" role="tab" aria-selected="true" data-loc="0"><span>01</span> Clifton Flagship</button>
+            <button class="loc-btn" role="tab" aria-selected="false" data-loc="1"><span>02</span> DHA Phase 6</button>
+            <button class="loc-btn" role="tab" aria-selected="false" data-loc="2"><span>03</span> Gulshan Garden</button>
+          </div>
+
+          <div class="loc-stage spot">
+            <div class="loc-panel" data-panel="0">
+              <h3>Clifton Flagship</h3>
+              <address>Sample Plaza, Block 4, Clifton<br />Karachi, Pakistan</address>
+              <dl>
+                <div><dt>Hours</dt><dd>Daily 8:00 AM &ndash; 12:00 AM</dd></div>
+                <div><dt>Phone</dt><dd>+92 21 0000 0001</dd></div>
+                <div><dt>Vibe</dt><dd>Roastery bar &amp; sea breeze terrace</dd></div>
+              </dl>
+            </div>
+            <div class="loc-panel" data-panel="1" hidden>
+              <h3>DHA Phase 6</h3>
+              <address>Sample Avenue, Khayaban-e-Shahbaz, DHA<br />Karachi, Pakistan</address>
+              <dl>
+                <div><dt>Hours</dt><dd>Daily 9:00 AM &ndash; 1:00 AM</dd></div>
+                <div><dt>Phone</dt><dd>+92 21 0000 0002</dd></div>
+                <div><dt>Vibe</dt><dd>Late-night lounge &amp; live acoustic</dd></div>
+              </dl>
+            </div>
+            <div class="loc-panel" data-panel="2" hidden>
+              <h3>Gulshan Garden</h3>
+              <address>Sample Center, Gulshan-e-Iqbal<br />Karachi, Pakistan</address>
+              <dl>
+                <div><dt>Hours</dt><dd>Daily 10:00 AM &ndash; 12:00 AM</dd></div>
+                <div><dt>Phone</dt><dd>+92 21 0000 0003</dd></div>
+                <div><dt>Vibe</dt><dd>Study-friendly with fast Wi-Fi</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ J. CONTACT SECTION ============ -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Let's <em>Talk</em> Coffee</h2>
+          <p>Questions, catering or collaborations? Send us a message and we will reply soon.</p>
+          <ul class="contact-list">
+            <li><span aria-hidden="true">&#9993;</span> hello@brewandbloom.example</li>
+            <li><span aria-hidden="true">&#9742;</span> +92 300 0000000</li>
+            <li><span aria-hidden="true">&#128205;</span> Karachi, Pakistan</li>
+          </ul>
+
+          <div class="socials" aria-label="Social media">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.6H7.4v3.3h2.8V22h3.3z"/></svg>
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form spot reveal" id="contactForm" novalidate style="--delay:.12s">
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Ali Ahmed" autocomplete="name" />
+            <span class="error" id="nameError" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+            <span class="error" id="emailError" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..."></textarea>
+            <span class="error" id="messageError" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-success" id="formSuccess" role="status" hidden>Thank you! Your message has been sent. We will be in touch soon.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ K. FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo" aria-label="BREW and BLOOM home"><span class="logo-mark" aria-hidden="true">B</span><span class="logo-text">BREW <i>&amp;</i> BLOOM</span></a>
+        <p class="footer-about">Premium coffee, crafted with passion and served with love.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#coffee">Our Coffee</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="big-word" aria-hidden="true">BREW &amp; BLOOM</p>
+    <p class="copyright">&copy; <span id="year">2026</span> BREW &amp; BLOOM. A demo project for ACM MAJU Vibe Coding Competition.</p>
+  </footer>
+
+  <!-- ============ CART DRAWER ============ -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart" id="cart" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <p class="cart-empty" id="cartEmpty">Your cart is empty. Add a coffee to get started!</p>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">Rs 0</strong></div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Place Order</button>
+      <button class="btn-link" id="clearCart">Clear cart</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="back-top" id="backTop" aria-label="Back to top">&#8593;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
